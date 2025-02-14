@@ -45,3 +45,14 @@ class Solution:
                 low = mid + 1
 
         return low
+    
+
+# Alternate solutions
+# Runtime: 55 ms, Beats 20.19%
+# Memory Usage: 17.36 MB, Beats 32.28%
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        for i, j in enumerate(nums):
+            if j >= target:
+                return i
+        return len(nums)
